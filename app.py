@@ -7,6 +7,12 @@ login,signup = st.tabs(
     ["Login","SignUp"]
 )
 
+cursor_Obj.execute("show databases")
+dbs=cursor_Obj.fetchall()
+
+for db in dbs:
+    st.write(db)
+
 with login:
     st.header("Login")
     with st.form("Login_Form"):
