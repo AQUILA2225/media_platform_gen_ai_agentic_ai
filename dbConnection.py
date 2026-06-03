@@ -1,7 +1,7 @@
 import mysql.connector
 import streamlit  as st
 
-conn_obj=mysql.connector.connect(
+con_obj=mysql.connector.connect(
     host = st.secrets["host"],
     database=st.secrets["database"],
     port=st.secrets["port"],
@@ -9,7 +9,7 @@ conn_obj=mysql.connector.connect(
     password=st.secrets["password"]
 )
 
-cursor_obj=conn_obj.cursor(dictionary=True)
+cursor_obj=con_obj.cursor(dictionary=True)
 
 # USERS TABLE
 cursor_obj.execute("""
