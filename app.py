@@ -1,5 +1,5 @@
 import streamlit as st 
-from db_c import con_obj,cursor_obj
+from dbConnection import con_obj,cursor_obj
 import cloudinary
 import cloudinary.uploader
 st.title("Media Platform")
